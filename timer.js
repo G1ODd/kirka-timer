@@ -24,7 +24,7 @@
     });
     document.body.appendChild(info);
 
-    // HUD (top-left now)
+    // HUD top-left
     const hud = document.createElement('div');
     hud.id = 'test-timer-hud';
     hud.textContent = '00:00.0';
@@ -32,7 +32,7 @@
     Object.assign(hud.style, {
       position: 'fixed',
       top: '10px',
-      left: '10px', // moved to left side
+      left: '10px',
       padding: '8px 12px',
       background: 'rgba(0, 0, 0, 0.75)',
       color: '#0f0',
@@ -113,7 +113,7 @@
     updateHUD();
   }
 
-  // Press Delete to initialize HUD once per page
+  // Press Delete to initialize HUD
   window.addEventListener('keydown', (e) => {
     if (initialized) return;
     const tag = (e.target && e.target.tagName) || '';
